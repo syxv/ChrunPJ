@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <body>
+  
+  <h2>Predict churn</h2>
+  
+  <form method="POST" action="/">
+    Age:<br>
+    <input type="number" name="age" value={{result.age}}>
+    <br><br>
+    credit score:<br>
+    <input type="number" name="credit_score" value={{result.credit_score}}>
+    <br><br>
+    Germany:<br>
+    <input type="number" name="Germany" value={{result.Germany}}>
+    <br><br>
+    Spain:<br>
+    <input type="number" name="Spain" value={{result.Spain}}>
+    <br><br>
+    France:<br>
+    <input type="number" name="France" value={{result.France}}>
+    <br><br>
+    estimated_salary:<br>
+    <input type="number" name="estimated_salary" value={{result.estimated_salary}}>
+    <br><br>
+    active_member:<br>
+    <input type="number" name="active_member" value={{result.active_member}}>
+    <br><br>
+    credit_card:<br>
+    <input type="number" name="credit_card" value={{result.credit_card}}>
+    <br><br>
+    products_number:<br>
+    <input type="number" name="products_number" value={{result.products_number}}>
+    <br><br>
+    balance:<br>
+    <input type="number" name="balance" value={{result.balance}}>
+    <br><br>
+    tenure:<br>
+    <input type="number" name="tenure" value={{result.tenure}}>
+    <br><br>
+    gender 0 male 1 famale:<br>
+    <input type="number" name="gender" value={{result.gender}}>
+    <br><br>
+    
+    <input type="submit" value="Submit">
+  </form>
+
+  {% if result.pred %}
+  <p>The churn probability is {{ result.pred }}</p>
+  {% endif %}
+
+  </body>
+</html>
